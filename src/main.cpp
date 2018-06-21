@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <time.h>
+#include "starter.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ int main(){
     b = new char *[100];
     for (int i=0; i<101; i ++)
         b[i] = new char [100];
+    Starter();
     
     return 0;
 }
