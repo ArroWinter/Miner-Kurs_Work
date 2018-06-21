@@ -28,3 +28,18 @@ void Bomber(int **a, int n){
         if (a[x][y]!=9) a[x][y]=9; else i--;
     }
 }
+
+void PrintMas(char **a, int n){
+    system("CLS");
+    cout « string(2*n, '=') « "|\n";
+    for (int i = 1; i < n+1; i++){
+        for (int j = 1; j < n+1; j++){
+            printf("|");
+            printf("%c", a[i][j]);
+        }
+        printf("|\n");
+    }
+    cout « string(2*n, '=') « "|\n";
+}
+
+
