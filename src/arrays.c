@@ -42,4 +42,37 @@ void PrintMas(char **a, int n){
     cout « string(2*n, '=') « "|\n";
 }
 
+void Search_Bomb(int **a, int n){
+    for (int i = 1; i <=n; i++){
+        for (int j = 1; j <=n; j++){
+            if (a[i][j]!=9){
+                if (a[i+1][j-1]==9){
+                    a[i][j]++;
+                }
+                if (a[i+1][j]==9){
+                    a[i][j]++;
+                }
+                if (a[i+1][j+1]==9){
+                    a[i][j]++;
+                }
+                if (a[i][j-1]==9){
+                    a[i][j]++;
+                }
+                if (a[i][j+1]==9){
+                    a[i][j]++;
+                }
+                if (a[i-1][j-1]==9){
+                    a[i][j]++;
+                }
+                if (a[i-1][j]==9){
+                    a[i][j]++;
+                }
+                if (a[i-1][j+1]==9){
+                    a[i][j]++;
+                }
+            }
+        }
+    }
+}
+
 
