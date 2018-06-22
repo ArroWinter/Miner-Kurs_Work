@@ -2,6 +2,29 @@
 #include <stdlib.h>
 #include "kursor.h"
 
+int Print_Keys(){
+    system("CLS");
+    int n;
+    printf("\nKeyboard:\n\n");
+    printf("You can control the game only on the English keyboard layout!\n");
+    printf("A+Enter - Move the cursor to the LEFT\n");
+    printf("D+Enter - Move the cursor to the RIGHT\n");
+    printf("S+Enter - Move the cursor DOWN\n");
+    printf("W+Enter - Move the cursor UP\n");
+    printf("E+Enter - Set / remove the flag!\n");
+    printf("Q+Enter - Open this again if you forget\n");
+    printf("F+Enter - Open cell\n");
+    printf("\n\nPress 1+Enter to continue the game\n\n");
+    scanf("%d", &n);
+    if (n==1){
+        system("CLS");
+        return 0;}
+    else{
+        system("CLS");
+        Print_Keys();
+    }
+}
+
 void Zero(int **a, char **b, int z, int c){
     if ((a[z+1][c]==0)&&(b[z+1][c]!='P')) b[z+1][c]='0';
     if ((a[z+1][c]==1)&&(b[z+1][c]!='P')) b[z+1][c]='1';
@@ -62,6 +85,7 @@ void Kursor(int **a, char **b, int p, char &temp){
         case 'a' : if (c-1>0){ b[z][c]=temp; temp=b[z][c-1]; b[z][c-1]='X';} else Kursor(a, b, p, temp); break;
         case 'w' : if (z-1>0){ b[z][c]=temp; temp=b[z-1][c]; b[z-1][c]='X';} else Kursor(a, b, p, temp); break;
         case 's' : if (z+1<p+1){ b[z][c]=temp; temp=b[z+1][c]; b[z+1][c]='X';} else Kursor(a, b, p, temp, flags, end); break;
+        case 'q' : Print_Keys(); break;
         case 'f' : switch(a[z][c]){
                        case 0 : temp='0'; Zero(a, b, z, c); break;
                        case 1 : temp='1'; break;
