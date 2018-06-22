@@ -47,4 +47,36 @@ void Kursor(int **a, char **b, int p, char &temp){
         }
     }
     else Kursor(a, b, p, temp);
+    if (n=='f'){
+        if (a[z][c]==0){
+            temp='0';
+        }
+        if (a[z][c]==1){
+            temp='1';
+        }
+        if (a[z][c]==2){
+            temp='2';
+        }
+        if (a[z][c]==3){
+            temp='3';
+        }
+        if (a[z][c]==4){
+            temp='4';
+        }
+        if (a[z][c]==5){
+            temp='5';
+        }
+        if (a[z][c]==6){
+            temp='6';
+        }
+        if (a[z][c]==7){
+            temp='7';
+        }
+        if (a[z][c]==8){
+            temp='8';
+        }
+        if (a[z][c]==9){
+            temp='9';
+        }
+    }
 }
