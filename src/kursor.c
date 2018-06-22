@@ -68,7 +68,7 @@ void Zero(int **a, char **b, int z, int c){
     if ((a[z][c-1]==4)&&(b[z][c-1]!='P')) b[z][c-1]='4';
 }
 
-void Kursor(int **a, char **b, int p, char &temp){
+void Kursor(int **a, char **b, int p, char &temp, int &flags){
     int z, c;
     char n;
     for (int i=0; i<=p; i++){
@@ -85,6 +85,7 @@ void Kursor(int **a, char **b, int p, char &temp){
         case 'a' : if (c-1>0){ b[z][c]=temp; temp=b[z][c-1]; b[z][c-1]='X';} else Kursor(a, b, p, temp); break;
         case 'w' : if (z-1>0){ b[z][c]=temp; temp=b[z-1][c]; b[z-1][c]='X';} else Kursor(a, b, p, temp); break;
         case 's' : if (z+1<p+1){ b[z][c]=temp; temp=b[z+1][c]; b[z+1][c]='X';} else Kursor(a, b, p, temp, flags, end); break;
+        case 'e' : if (temp=='P') { temp=' '; flags++;} else { if (flags>0){ temp='P'; flags--;} else Kursor(a, b, p, temp, flags, end);} break;
         case 'q' : Print_Keys(); break;
         case 'f' : switch(a[z][c]){
                        case 0 : temp='0'; Zero(a, b, z, c); break;
