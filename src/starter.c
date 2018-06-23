@@ -4,7 +4,7 @@
 #include "kursor.h"
 
 int Starter(){
-    int size, bombs, flags;
+    int size, bombs, flags, r;
     char temp=' ';
     Print_Keys;
     printf("Enter the field size not more than 100x100(For example: 10 => field will be 10x10): ");
@@ -29,9 +29,27 @@ int Starter(){
             }
             PrintMas(b, size);
             printf("\nGame over! You exploded!\n");
-            return 0;
+            printf("\nPlay again?\n");
+            printf("1 - Yes");
+            printf("\n2 - No\n");
+            scanf("%d", &r);
+            switch(r){
+                case 1: Starter(); break;
+                case 2: return 0; break;
+                default: printf("\nInputing Error, Open the game again if you want play again!\n");
+            }
         }
         if (end==bombs){
             printf("\nVictory! You have defused all the bombs!\n");
+            printf("\nPlay again?\n");
+            printf("1 - Yes");
+            printf("\n2 - No\n");
+            scanf("%d", &r);
+            switch(r){
+                case 1: Starter(); break;
+                case 2: return 0; break;
+                default: printf("\nInputing Error, Open the game again if you want play again!\n");
+            }
+        }
     }
 }
