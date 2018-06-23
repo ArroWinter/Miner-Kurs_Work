@@ -27,7 +27,6 @@ int Starter(){
     Create_MassC(b, size);
     Bomber(a, bombs);
     Search_Bomb(a, size);
-    PrintMas(b, size);
     while(1){
         Kursor(a, b, size, temp, flags, end);
         PrintMas(b, size);
