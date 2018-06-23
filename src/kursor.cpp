@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include "kursor.h"
 
-int Print_Keys(){
+void Print_Keys(){
     system("CLS");
-    int n;
     printf("\nKeyboard:\n\n");
     printf("You can control the game only on the English keyboard layout!\n");
     printf("A+Enter - Move the cursor to the LEFT\n");
@@ -14,15 +13,6 @@ int Print_Keys(){
     printf("E+Enter - Set / remove the flag!\n");
     printf("Q+Enter - Open this again if you forget\n");
     printf("F+Enter - Open cell\n");
-    printf("\n\nPress 1+Enter to continue the game\n\n");
-    scanf("%d", &n);
-    if (n==1){
-        system("CLS");
-        return 0;}
-    else{
-        system("CLS");
-        Print_Keys();
-    }
 }
 
 void Zero(int **a, char **b, int z, int c){
@@ -130,6 +120,7 @@ void Kursor(int **a, char **b, int p, char &temp, int &flags, int &end){
                              temp='P';
                              flags--;
                          } else Kursor(a, b, p, temp, flags, end);
+                     }
                    end=Check_Flags(a, b, z, c, p, temp, flags);
                    break;
         case 'q' : Print_Keys(); 
