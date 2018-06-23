@@ -4,7 +4,7 @@
 
 
 
-void Create_Mass(int **a, int n){
+void Create_MassI(int **a, int n){
     for (int i=0; i<n+2; i++){
         for(int j=0; j<n+2; j++){
             a[i][j]=0;
@@ -12,7 +12,7 @@ void Create_Mass(int **a, int n){
     }
 }
 
-void Create_Mass(char **b, int n){
+void Create_MassC(char **b, int n){
     for (int i=0; i<n+2; i++){
         for (int j=0; j<n+2; j++){
             b[i][j]=' ';
