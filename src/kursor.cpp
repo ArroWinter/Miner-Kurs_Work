@@ -102,19 +102,19 @@ void Kursor(int **a, char **b, int p, char &temp, int &flags, int &end){
                        temp=b[z][c+1]; 
                        b[z][c+1]='X';
                    } 
-                   else Kursor(a, b, p, temp); 
+                   else Kursor(a, b, p, temp, flags, end); 
                    break;
         case 'a' : if (c-1>0){ 
                        b[z][c]=temp; 
                        temp=b[z][c-1]; 
                        b[z][c-1]='X';
-                   } else Kursor(a, b, p, temp); 
+                   } else Kursor(a, b, p, temp, flags, end); 
                    break;
         case 'w' : if (z-1>0){ 
                        b[z][c]=temp; 
                        temp=b[z-1][c]; 
                        b[z-1][c]='X'; 
-                   } else Kursor(a, b, p, temp); 
+                   } else Kursor(a, b, p, temp, flags, end); 
                    break;
         case 's' : if (z+1<p+1){ 
                        b[z][c]=temp; 
