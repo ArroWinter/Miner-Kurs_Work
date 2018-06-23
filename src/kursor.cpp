@@ -3,7 +3,6 @@
 #include "kursor.h"
 
 void Print_Keys(){
-    system("CLS");
     printf("\nKeyboard:\n\n");
     printf("You can control the game only on the English keyboard layout!\n");
     printf("A+Enter - Move the cursor to the LEFT\n");
