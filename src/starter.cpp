@@ -12,7 +12,7 @@ int Starter(){
     b = new char *[100];
     for (int i=0; i<101; i ++)
         b[i] = new char [100];
-    Print_Keys;
+    Print_Keys();
     printf("Enter the field size not more than 100x100(For example: 10 => field will be 10x10): ");
     scanf("%d", &size);
     printf("Enter the number of bombs: ");
