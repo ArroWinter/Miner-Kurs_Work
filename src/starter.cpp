@@ -6,17 +6,21 @@
 int Starter(){
     int size, bombs, flags, r, **a, end;
     char **b, temp=' ';
-    a = new int *[100];
-    for (int i=0; i<101; i ++)
-        a[i] = new int [100];
-    b = new char *[100];
-    for (int i=0; i<101; i ++)
-        b[i] = new char [100];
     Print_Keys();
-    printf("Enter the field size not more than 100x100(For example: 10 => field will be 10x10): ");
+    printf("Enter the field size (For example: 10 => field will be 10x10): ");
     scanf("%d", &size);
-    printf("Enter the number of bombs: ");
+    a = new int *[size+2];
+    for (int i=0; i<size+2; i ++)
+        a[i] = new int [size+2];
+    b = new char *[size+2];
+    for (int i=0; i<size+2; i ++)
+        b[i] = new char [size+2];
+    printf("Enter the number of bombs(Not more than field size): ");
     scanf("%d", &bombs);
+    if (bombs>=size*size){
+        printf("Input error! Restart game!");
+        return 0;
+    } 
     flags=bombs;
     printf("\n\n");
     Create_MassI(a, size);
@@ -58,4 +62,6 @@ int Starter(){
             }
         }
     }
+    free(a);
+    free(b);
 }
