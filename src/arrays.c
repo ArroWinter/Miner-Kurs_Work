@@ -6,7 +6,7 @@
 
 void Create_Mass(int **a, int n){
     for (int i=0; i<n+2; i++){
-        for(int j=0; j<n; j++){
+        for(int j=0; j<n+2; j++){
             a[i][j]=0;
         }
     }
