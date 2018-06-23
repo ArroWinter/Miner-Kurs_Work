@@ -1,7 +1,8 @@
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include "arrays.h"
 
-using namespace std;
+
 
 void Create_Mass(int **a, int n){
     for (int i=0; i<n+2; i++){
@@ -31,7 +32,10 @@ void Bomber(int **a, int n){
 
 void PrintMas(char **a, int n){
     system("CLS");
-    cout « string(2*n, '=') « "|\n";
+    for (int k = 0; k < 2*n; k++){
+        printf("=");
+    }
+    printf("|\n");
     for (int i = 1; i < n+1; i++){
         for (int j = 1; j < n+1; j++){
             printf("|");
@@ -39,7 +43,9 @@ void PrintMas(char **a, int n){
         }
         printf("|\n");
     }
-    cout « string(2*n, '=') « "|\n";
+    for (int k = 0; k < 2*n; k++){
+        printf("=");
+    }
 }
 
 void Search_Bomb(int **a, int n){
