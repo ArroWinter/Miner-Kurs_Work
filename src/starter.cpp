@@ -18,7 +18,7 @@ int Starter(){
     printf("Enter the number of bombs(Not more than field size): ");
     scanf("%d", &bombs);
     if (bombs>=size*size){
-        printf("Input error! Restart game!");
+        printf("Input error! Restart game!\n");
         return 0;
     } 
     flags=bombs;
