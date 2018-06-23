@@ -122,8 +122,7 @@ void Kursor(int **a, char **b, int p, char &temp, int &flags, int &end){
                      }
                    end=Check_Flags(a, b, z, c, p, temp, flags);
                    break;
-        case 'q' : Print_Keys(); 
-                   break;
+        case 'q' : Print_Keys(); break;
         case 'f' : switch(a[z][c]){
                        case 0 : temp='0'; Zero(a, b, z, c); break;
                        case 1 : temp='1'; break;
