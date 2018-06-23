@@ -13,8 +13,8 @@ int Starter(){
     scanf("%d", &bombs);
     flags=bombs;
     printf("\n\n");
-    Create_Mass(a, size);
-    Create_Mass(b, size);
+    Create_MassI(a, size);
+    Create_MassC(b, size);
     Bomber(a, bombs);
     Search_Bomb(a, size);
     PrintMas(b, size);
