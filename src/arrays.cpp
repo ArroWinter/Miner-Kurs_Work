@@ -31,7 +31,6 @@ void Bomber(int **a, int n){
 }
 
 void PrintMas(char **a, int n){
-    system("CLS");
     for (int k = 0; k < 2*n; k++){
         printf("=");
     }
