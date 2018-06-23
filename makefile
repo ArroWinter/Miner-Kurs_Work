@@ -11,14 +11,14 @@ bin/main: build/main.o build/arrays.o build/kursor.o build/starter.o
 build/main.o: src/main.cpp
 	g++ -Wall -Werror -c src/main.cpp -o build/main.o
 
-build/arrays.o: src/arrays.c
-	gcc -Wall -Werror -c src/arrays.c -o build/arrays.o
+build/arrays.o: src/arrays.cpp
+	g++ -Wall -Werror -c src/arrays.cpp -o build/arrays.o
 
-build/kursor.o: src/kursor.c
-	gcc -Wall -Werror -c src/kursor.c -o build/kursor.o
+build/kursor.o: src/kursor.cpp
+	g++ -Wall -Werror -c src/kursor.cpp -o build/kursor.o
 
-build/starter.o: src/starter.c
-	gcc -Wall -Werror -c src/starter.c -o build/starter.o
+build/starter.o: src/starter.cpp
+	g++ -Wall -Werror -c src/starter.cpp -o build/starter.o
 
 .PHONY: clean
 
