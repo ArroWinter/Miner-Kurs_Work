@@ -31,5 +31,7 @@ int Starter(){
             printf("\nGame over! You exploded!\n");
             return 0;
         }
+        if (end==bombs){
+            printf("\nVictory! You have defused all the bombs!\n");
     }
 }
