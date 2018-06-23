@@ -46,6 +46,7 @@ void PrintMas(char **a, int n){
     for (int k = 0; k < 2*n; k++){
         printf("=");
     }
+    printf("|\n");
 }
 
 void Search_Bomb(int **a, int n){
