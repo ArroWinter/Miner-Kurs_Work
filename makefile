@@ -24,7 +24,7 @@ bin/miner_test: build/miner_test.o build/arrays.o build/kursor.o build/starter.o
 	g++ -Wall -Werror  build/miner_test.o build/arrays.o build/kursor.o build/starter.o -o bin/miner_test 
 
 build/miner_test.o: test/main.c
-	g++ -Wall -Werror -c -I thirdparty -I src -c test/main.c -o build/miner_test.o
+	g++ -Wall -Werror -c -I thirdparty -I src -c test/main.cpp -o build/miner_test.o
 	
 
 .PHONY: clean
