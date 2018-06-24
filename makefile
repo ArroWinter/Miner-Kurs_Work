@@ -21,7 +21,7 @@ build/starter.o: src/starter.cpp
 	g++ -Wall -Werror -c src/starter.cpp -o build/starter.o
 
 bin/miner_test: build/main_test.o build/arrays.o build/kursor.o build/starter.o 
-	gcc -Wall -Werror  build/main_test.o build/arrays.o build/kursor.o build/starter.o -o bin/miner_test 
+	gcc -Wall -Werror  build/miner_test.o build/arrays.o build/kursor.o build/starter.o -o bin/miner_test 
 
 build/miner_test.o: test/main.c
 	gcc -Wall -Werror -c -I thirdparty -I src -c test/main.c -o build/miner_test.o
